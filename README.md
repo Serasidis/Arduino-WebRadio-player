@@ -13,7 +13,7 @@ The hardware
 Additional libraries
 =======================
 - The ENC28J60 uses the [EtherCard][F] library that is extremely fast!
-- [TimerOne][A] Interrupt utilitiy
+- [TimerOne][A] Interrupt utility
 
 
 More information on my web site [www.serasidis.gr][B]
