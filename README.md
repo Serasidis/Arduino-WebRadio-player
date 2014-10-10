@@ -8,5 +8,7 @@ The modules are used are:
 - Nokia LCD 5110 module
 - and an Arduino Pro mini compatible board
 
+The ENC28J60 uses the EtherCard library that is extremely fast!
+
 More information on my web site http://www.serasidis.gr/Arduino_WebRadio_player/Arduino_WebRadio_player.htm
 
