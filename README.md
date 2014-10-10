@@ -2,7 +2,9 @@ Arduino WebRadio player
 =======================
 
 Arduino webradio player that can plays WebRadio stations up to 64-kbps.
-The modules are used are:
+
+The hardware
+=======================
 - ENC28J60 ethernet module
 - VS1053B mp3, aac, wma decoder
 - Nokia LCD 5110 module
