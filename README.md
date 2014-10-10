@@ -15,8 +15,12 @@ Additional libraries
 - The ENC28J60 uses the [EtherCard][F] library that is extremely fast!
 - [TimerOne][A] Interrupt utilitiy
 
+
+More information on my web site [www.serasidis.gr][B]
+
+
 [A]:https://github.com/devalfrz/TimerOne
+[B]:http://www.serasidis.gr/circuits/Arduino_WebRadio_player/Arduino_WebRadio_player.htm
 [F]:https://github.com/jcw/ethercard
 
-More information on my web site http://www.serasidis.gr/Arduino_WebRadio_player/Arduino_WebRadio_player.htm
 
