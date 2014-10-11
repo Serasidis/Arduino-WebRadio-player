@@ -123,7 +123,7 @@ const int   station14_Port = 9998;
 //=====================================================================================================
 static void my_callback (byte status, word off, word len)
 {
-	unsigned int i, m, n;
+	unsigned int i;
         
         if((indexCounter < 500) && (ViewStationInfo == false))
         {
@@ -147,15 +147,6 @@ static void my_callback (byte status, word off, word len)
         else
         {
            uint8_t* data = (uint8_t *) Ethernet::buffer + off; //Get the data stream from ENC28J60 and...
-           //if (data.substring(0) == "StreamTitle")
-           //m = sizeof(data);
-           //for(i=0;i<(m-4);i++)
-           //  if((data[i] == 'T')&&(data[i+1] == 'i')&&(data[i+2] == 't')&&(data[i+3] == 'l')&&(data[i+4] == 'e'))
-           //  {
-           //    lcd.clear();
-           //    lcd.setCursor(2, 0);
-           //    lcd.print(F("-= title found =-"));
-           //  }
            player.playChunk(data, len);                        //...send them to VS1053B
            timer = millis();                                   //Update the timeout timer.
            receivedData = true;
