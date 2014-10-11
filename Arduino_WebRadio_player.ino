@@ -92,9 +92,6 @@ const int   station6_Port = 8530;
 static byte station7_IP[] = {144,76,204,149};   // RADIO KARDOYLA - 64-kbps 22050 Hz
 const int   station7_Port = 9940;
 
-//static byte station7_IP[] = {192,168,1,65};   // Local server
-//const int   station7_Port = 23;
-
 static byte station8_IP[] = {198,50,101,130};   //La Hit Radio, Rock - Metal - Hard Rock, 32-kbps
 const int   station8_Port = 8245;
 
