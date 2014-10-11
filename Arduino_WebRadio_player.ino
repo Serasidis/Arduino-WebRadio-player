@@ -235,7 +235,6 @@ void loop()
        case 1:
           playWebRadioStation(station1_IP, station1_Port, "01");
        break;
-       
        case 2:
           playWebRadioStation(station2_IP , station2_Port, "02");
        break; 
@@ -299,23 +298,6 @@ void loop()
 //=====================================================================================================
 void playWebRadioStation ( byte ip[4], const int hisPort, char* preset )
 {
-  //String webDir = "";
-  //char webDirString[16];
-  //char i,m;
- 
-  //webDir += String(ip[0]);
-  //webDir += '.';
-  //webDir += String(ip[1]);
-  //webDir += '.';
-  //webDir += String(ip[2]);
-  //webDir += '.';
-  //webDir += String(ip[3]);
-  
-  //m = webDir.length();
-  //for(i=0;i<m;i++)
-  //  webDirString[i] = webDir[i];
-    
-  //webDirString[m]=0;  
   Serial.print("\n\n<"); //Print the station info to the serial port
   Serial.print(preset);
   Serial.println(F("> ============================================================"));
