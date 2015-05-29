@@ -4,6 +4,10 @@
  This program is free software; you can redistribute it and/or
  modify it under the terms of the GNU General Public License
  version 2 as published by the Free Software Foundation.
+ 
+ 
+ 29 May 2015 :: Added by Vassilis Serasidis a function for defective LC Technology VS1053B boards.
+ 
  */
 
 // STL headers
@@ -341,6 +345,20 @@ void VS1053::printDetails(void) const
 }
 
 /****************************************************************************/
+void VS1053::modeSwitch(void)
+{
+  //GPIO_DDR
+  write_register(SCI_WRAMADDR, 0xc017);
+  write_register(SCI_WRAM, 0x0003);
+  //GPIO_ODATA
+  write_register(SCI_WRAMADDR, 0xc019);
+  write_register(SCI_WRAM, 0x0000);
+  
+  delay(1);
+  write_register(SCI_MODE, (1<<SM_SDINEW) | (1<<SM_RESET));
+  delay(1);
+}
+/****************************************************************************/
 
 void VS1053::loadUserCode(const uint16_t* buf, size_t len) const
 {
@@ -352,13 +370,13 @@ void VS1053::loadUserCode(const uint16_t* buf, size_t len) const
       n &= 0x7FFF;
       uint16_t val = pgm_read_word(buf++); len--;
       while (n--) {
-	printf_P(PSTR("W %02x: %04x\r\n"),addr,val);
+        printf_P(PSTR("W %02x: %04x\r\n"),addr,val);
         write_register(addr, val);
       }
     } else {           /* Copy run, copy n samples */
       while (n--) {
-	uint16_t val = pgm_read_word(buf++); len--;
-	printf_P(PSTR("W %02x: %04x\r\n"),addr,val);
+        uint16_t val = pgm_read_word(buf++); len--;
+        printf_P(PSTR("W %02x: %04x\r\n"),addr,val);
         write_register(addr, val);
       }
     }
