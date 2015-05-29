@@ -138,6 +138,9 @@ public:
    * @param vol Volume level from 0-255, lower is louder.
    */
   void setVolume(uint8_t vol) const;
+  
+  
+  void modeSwitch(void);
 
   /**
    * Play real-time MIDI.  Useful for using the VS1053 to make an
