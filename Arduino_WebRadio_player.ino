@@ -165,6 +165,7 @@ void setup()
 	Serial.begin(57600);    //Start serial port with 57600 bits per seconds
 	SPI.begin();            //Start Serial Peripheral Interface (SPI)
 	player.begin();         //Start VS1053B
+	player.modeSwitch();    //Change mode from MIDI to MP3 decoding (Vassilis Serasidis).
         player.setVolume(0);    //Set the volume to the maximux.
         
         lcd.begin(84, 48); //84*48 pixels lcd (Nokia 5110).
