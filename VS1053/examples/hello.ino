@@ -22,7 +22,7 @@
 #include <SPI.h>
 
 /*
- * VS1003 development board connected by it's header pins the following way:
+ * VS1053 development board connected by it's header pins the following way:
  *
  * GND  - GND
  * XDCS - D6
@@ -35,7 +35,7 @@
  * GND  - GND
  * 5V   - 5V
  */
-VS1003 player(9, 6, 7, 8); // cs_pin, dcs_pin, dreq_pin, reset_pin
+VS1053 player(9, 6, 7, 8); // cs_pin, dcs_pin, dreq_pin, reset_pin
 
 unsigned char HelloMP3[] = {
   0xFF,0xF2,0x40,0xC0,0x19,0xB7,0x00,0x14,0x02,0xE6,0x5C, /* ..@.......\ */
