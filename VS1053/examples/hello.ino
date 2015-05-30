@@ -18,7 +18,7 @@
 #include <Arduino.h>
 
 #include "printf.h"
-#include <VS1003.h>
+#include <VS1053.h>
 #include <SPI.h>
 
 /*
